@@ -1,6 +1,8 @@
 public class APCalendar
 {
-    /** leap year is true, false otherwise */
+    /**
+     * leap year is true, false otherwise
+     */
     private static boolean isLeapYear (int year)
     {
         //leap year is every 4 years, 2000 must be /400 to be leap
@@ -11,27 +13,23 @@ public class APCalendar
             else
                 return false;
         }
+        if (year/4 == 0)
+            return true;
         else
-        {
-            if (year/4 == 0)
-                return true;
-            else
-                return false;
+            return false;
     /** return number of leap years between years 1 & 2, inclusive */
     public static int numberOfLeapYears (int year1, int year2)
     {
         //0 <= year1 <= year2
-        if (isLeapYear(year1)) = true
+        if (isLeapYear(year1) = isLeapYear(year2) = true)
         {
-            if (isLeapYear(year2)) = true
-            {
-                return "yay leap";
-            }
-            else
-                return "no leap years";
+            int total;
+            for (0 <= year1 <= year2)
+                ((year2 - year1) + 1) = total;
+            return total;
         }
         else
-            return "no leap years";
+            return 0;
     }
     /** returns first day of the year from the week */
     private static int firstDayOfYear (int year)
